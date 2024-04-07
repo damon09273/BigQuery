@@ -1,9 +1,13 @@
 SELECT
-    event_date 
-    , COUNT(*) sessions
-FROM 
-    `doordata-course.ga4_sample.events_202012*`
-WHERE 
-    event_name = 'session_start'
+  event_date,
+  COUNT(*)
+FROM
+  `doordata-course.ga4_sample.events_*`
+WHERE
+  event_name = 'session_start'
+  AND _TABLE_SUFFIX BETWEEN '20200101'
+  AND '20201231'
 GROUP BY
-    event_date
+  event_date
+ORDER BY
+  event_date
