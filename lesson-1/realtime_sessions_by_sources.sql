@@ -7,7 +7,7 @@ END
   AS source_medium,
   COUNT(*) sessions
 FROM
-  `doordata09273.analytics_271820639.events_intraday_*`
+  `doordata09273.analytics_271820639.events_intraday_YYYYMMDD`
   --  替換成你自己的即時表格
 WHERE
   event_name = 'session_start'
