@@ -1,0 +1,1 @@
+SELECT FORMAT_DATE('%Y%m', PARSE_DATE('%Y%m%d', '20230101'))
