@@ -4,7 +4,7 @@ SELECT
   COUNT(*) AS devices
 FROM
   -- 換成你的表格
-  `project.dataset.events_intraday_20240405`
+  `project.dataset.events_intraday_YYYYMMDD`
 WHERE
   event_name = 'session_start'
   AND TIMESTAMP_MICROS(event_timestamp) >= TIMESTAMP_SUB(CURRENT_TIMESTAMP(), INTERVAL 30 MINUTE)
